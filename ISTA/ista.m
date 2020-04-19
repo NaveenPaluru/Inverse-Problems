@@ -9,6 +9,9 @@ clc;
 
 % minimize ||Ax-y||2 + lambda ||x||1 w.r.t x
 
+% Compare the final results of ISTA with SD in the same repository, then
+% on can appreciate the sparsity the need of constraint for this problem.
+
 % This snipped solves a deblurring problem of the form Ax = y. A is the
 % blurring operator (BCCB ), x is true image and the y is blurred image.
 
@@ -33,6 +36,7 @@ clc;
 %Read the data and display the demo image and perform blur.
 
 orgimg  = imread('cameraman.tif');
+orgimg  = edge(orgimg,'canny');
 figure;
 subplot(131);
 imshow(mat2gray(orgimg));
@@ -52,9 +56,9 @@ sgtitle('Deblurring by SD');
 % minimize ||Ax-y||2 + lambda ||x||1 w.r.t x
 
 xinit = zeros(size(orgimg));
-iter  = 100;
+iter  = 4000;
 alpha = 1;
-lambda=0.001;
+lambda=0.01;
 
 for i = 1:iter    
     xtemp = xinit - alpha * ifft2(L.^2 .* fft2(xinit)) + alpha * ifft2(L .* fft2(y));
