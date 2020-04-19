@@ -1,1 +1,16 @@
 
+%%  Orthogonal Matching Pursuit Algorithm for solving Ax = y
+
+%Ref: https://link.springer.com/book/10.1007%2F978-981-13-3597-6
+%Ref: Pati, Y.C., Rezaiifar, R., Rezaiifar, Y.C.P.R., Krishnaprasad, P.S.: Orthogonal matching 
+% pursuit : recursive function approximation with applications to the wavelet  decomposition.  In : 
+% Proceedings %of the 27th Annual Asilomar Conference on Signals, Systems, and Computers, pp. 40–44
+%(1993)
+
+% Naveen Paluru ; April 17, 2020
+
+% OMP is a simple algorithm, that can solve for x which is sparse
+% in its domain, assuming given an underdetermined orthogonal sen
+% -sing matrix. For simplicity we assumed that sensing matrix is of
+% full rank. This is a simple program that shows OMP can solve forx.
+% 
