@@ -28,6 +28,7 @@ clc;
 %Read the data and display the demo image and perform blur.
 
 orgimg  = imread('cameraman.tif');
+orgimg  = edge(orgimg,'canny');
 figure;
 subplot(131);
 imshow(mat2gray(orgimg));
@@ -47,7 +48,7 @@ sgtitle('Deblurring by SD');
 % x_k+1 = x_k - alpha * A' (A * x_k - y)
 
 xinit = zeros(size(orgimg));
-iter  = 500;
+iter  = 4000;
 alpha = 1;
 
 for i = 1:iter    
