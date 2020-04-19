@@ -1,0 +1,10 @@
+
+
+%%
+
+% This is a small demostration showing truncated SVD. For ill-conditioned matrices, 
+% many of the eigenvalues, while not zero, can become quite small causing the data
+% inversion to blow up if there is any noise at all present (and thereis always is 
+% noise present). To prevent this, only the first n are included.
+
+% Ref : https://www.nmr.mgh.harvard.edu/PMI/toolbox/Documentation/tsvd.xhtml
