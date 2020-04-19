@@ -1,0 +1,28 @@
+%% Iterative Shrinkage Thresholding Algorithm. ISTA is SD + Soft Threshold
+
+
+% More Effective when the signal is sparse .
+
+% minimize ||Ax-y||2 + lambda ||x||1 w.r.t x
+
+% This snipped solves a deblurring problem of the form Ax = y. A is the
+% blurring operator (BCCB ), x is true image and the y is blurred image.
+
+% A = m x m 
+% x = m x 1  (in image form, x is a x b, where ab = m)
+% y = m x 1  (in image form, y is a x b, where ab = m)
+
+% We neither vectorize x nor y. Rather we solve the problem in the image
+% domain using the properties of BCCB matrix.
+
+% A = F'LF. 
+% F = m x m (2D DFT matrix)
+% L = m x m diagonal matrix with entries being 2D DFT of the Point spread
+% function of the blur matrix A.
+
+% Ref : https://angms.science/doc/CVX/ISTA0.pdf
+% Ref : Deblurring Images: Matrices, Spectra, and Filtering % Per Christian 
+%       Hansen, James G. Nagy, and Dianne P. O’Leary
+% Ref : A Fast Iterative Shrinkage-Thresholding Algorithm for LinearInverse 
+        Problems∗
+        Amir Beck and Marc Teboulle
