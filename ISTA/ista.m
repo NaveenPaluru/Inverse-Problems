@@ -49,7 +49,7 @@ subplot(132);
 imshow(mat2gray(y));
 xlabel('Blurred (Var = 3) ');
 title(strcat(num2str(psnr(y,double(orgimg))),'dB '));
-sgtitle('Deblurring by SD');
+sgtitle('Deblurring by ISTA');
 
 %% Inverse problem
 
