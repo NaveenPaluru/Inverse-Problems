@@ -64,7 +64,7 @@ for i = 1:iter
     xtemp = xinit - alpha * ifft2(L.^2 .* fft2(xinit)) + alpha * ifft2(L .* fft2(y));
     x = xtemp;
     % soft Threshold
-    xtemp = sign(x).*(max(abs(x)-lambda/(2*alpha),0));
+    xtemp = sign(x).*(max(abs(x)-lambda*alpha ,0));
     xinit = xtemp;
     snr(i)= psnr(double(orgimg),xinit);
 end
