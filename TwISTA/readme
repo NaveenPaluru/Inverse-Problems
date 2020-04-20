@@ -1,1 +1,7 @@
 
+%  This snippet shows the comparsion beween ISTA and twISTA.
+
+%  TwISTA is Two-step IST (TwIST) algorithm that converges faster
+%  than the simple IST even when A is severely ill-posed. Each of
+%  iteration of the TwIST is performed based on the two previous
+%  iterations.
