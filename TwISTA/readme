@@ -1,5 +1,7 @@
 
-%  This snippet shows the comparsion beween ISTA and twISTA.
+%  This snippet shows the comparsion beween the ISTA and twISTA.
+
+%  Ref:https://link.springer.com/book/10.1007%2F978-981-13-3597-6
 
 %  TwISTA is Two-step IST (TwIST) algorithm that converges faster
 %  than the simple IST even when A is severely ill-posed. Each of
