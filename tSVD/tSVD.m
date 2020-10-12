@@ -12,9 +12,11 @@
 clc; clear all; close all;
 rng(200);
 
-%  A is not full rank. So A'A is invertible.
+
 
 A = rand(15,15); A(:,1) = A(:,2);
+%  A is not full rank. So A'A is not invertible.
+
 x = rand(15, 1);
 
 % Forward  problem
